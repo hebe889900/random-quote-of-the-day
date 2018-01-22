@@ -17,6 +17,7 @@ class App extends React.Component {
 					      showExpandableButton={true}/>
 	            <CardText>{this.props.content}</CardText>
 	            <CardActions id = "button"></CardActions>
+	            <CardActions id = "socialbutton"></CardActions>
 	            </Card>
 	         </div>
          </MuiThemeProvider>
