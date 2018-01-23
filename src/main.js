@@ -14,7 +14,7 @@ function InitializePage(){
 }
 
 function RenderButton(){
-	ReactDOM.render(<QuoteButton />, document.getElementById('button'));
+	ReactDOM.render(<QuoteButton backgroundColor = {"#212121"}/>, document.getElementById('button'));
 }
 
 function RenderSocialButton(){
