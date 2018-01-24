@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { SocialIcon, SocialIcons} from 'react-social-icons';
-import App from './app.jsx';
+import App from './App.jsx';
 
 const urls = [
   "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22If%20you%20can't%20get%20rid%20of%20the%20skeleton%20in%20your%20closet%2C%20you'd%20best%20teach%20it%20to%20dance.%22%20George%20Bernard%20Shaw",
