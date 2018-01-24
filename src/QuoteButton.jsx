@@ -4,7 +4,7 @@ import axios from 'axios';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import he from 'he';
-import App from './app.jsx';
+import App from './App.jsx';
 
 const colors = [["#B71C1C","#E57373"],["#880E4F","#F06292"],["#4A148C","#BA68C8"],["#1A237E","#5C6BC0"],["#0D47A1","#42A5F5"],["#01579B","#039BE5"],["#1B5E20","#43A047"]];
 console.log(colors.length)
