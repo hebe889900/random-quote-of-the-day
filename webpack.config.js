@@ -2,7 +2,7 @@
 
 // webpack.config.js
 const path = require('path'); // NOTE: We require path because we use it below
-
+const webpack = require('webpack');
 module.exports = {
 
   entry: './src/main.js', // IMPORTANT: We changed the path to match our new index.js location
@@ -13,8 +13,7 @@ module.exports = {
   },
 	devServer: {
 	  contentBase: "./src",
-	  inline: true,
-	  port: 8080
+    hot: true
 	},
    module: {
       loaders: [
@@ -27,6 +26,10 @@ module.exports = {
             }
          }
       ]
-   }
-
+   },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
+  ]
 };
