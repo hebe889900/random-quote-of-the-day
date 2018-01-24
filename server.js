@@ -1,16 +1,11 @@
 const path = require('path');
 const express = require('express');
+
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'src')));
+app.use(express.static(path.join(__dirname, 'dist')));
+app.set('port', process.env.PORT || 8080);
 
-app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/dist/index.html');
+const server = app.listen(app.get('port'), function() {
+  console.log('listening on port ', server.address().port);
 });
-
-app.listen(PORT, error => (
-  error
-    ? console.error(error)
-    : console.info(`Listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`)
-));
