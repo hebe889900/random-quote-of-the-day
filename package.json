@@ -4,11 +4,8 @@
   "description": "A minimal Webpack project to teach you how to set up a new project",
   "main": "main.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.config.js",
-    "dev": "webpack-dev-server --hot --inline",
-    "lint": "eslint src/**",
-    "lint:watch": "esw -w src/**",
-    "start": "npm run build && NODE_ENV=production node server.js"
+    "build": "webpack",
+    "start": "webpack-dev-server --hot"
   },
   "author": "Jack <jackyan63@gmail.com>",
   "license": "MIT",
