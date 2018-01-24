@@ -10,7 +10,7 @@ RenderSocialButton();
 
 
 function InitializePage(){
-	ReactDOM.render(<App />, document.getElementById('app'));
+	ReactDOM.render(<App />, document.getElementById('root'));
 }
 
 function RenderButton(){
