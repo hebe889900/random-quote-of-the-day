@@ -30,8 +30,6 @@ function handleClick(e){
 	const style = {
 	  color: 'white',
 	};
-
-
 	ReactDOM.render(
 		<QuoteButton backgroundColor={color}/>,
 		document.getElementById('button')
@@ -42,7 +40,7 @@ function handleClick(e){
 		//alert("clicked");
 		//alert(response.data[0].content);
 		ReactDOM.render(
-		<App title={response.data[0].title} content = {he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"")}/>,
+		<App color = {color} titleColor = {color} title={response.data[0].title} content = {he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"")}/>,
 		document.getElementById('app')
 		);
 	})

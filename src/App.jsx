@@ -13,9 +13,9 @@ class App extends React.Component {
 	         <div>
 	         	<Card>
 	         	    <CardHeader title= {this.props.title} 
-					      actAsExpander={true}
+					      titleColor = {this.props.titleColor} actAsExpander={true}
 					      showExpandableButton={true}/>
-	            <CardText>{this.props.content}</CardText>
+	            <CardText color = {this.props.color}>{this.props.content}</CardText>
 	            <CardActions id = "button"></CardActions>
 	            <CardActions id = "socialbutton"></CardActions>
 	            </Card>
