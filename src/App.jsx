@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import axios from 'axios';
+import TwitterButton from './TwitterButton.jsx';
 
 class App extends React.Component {
    render() {
@@ -34,6 +35,15 @@ function handleClick(e){
 	.then(function (response) {
 		//alert("clicked");
 		//alert(response.data[0].content);
+		let content = he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"");
+		let title = response.data[0].title;
+		let twitter_url = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + '"' + content + '" ' + title;
+		let tumblr_url = 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' + title + '&content=' + content + '&canonicalUrl=https://www.tumblr.com/buttons&shareSource=tumblr_share_button'
+		let urls = [encodeURI(twitter_url),encodeURI(tumblr_url)];
+		ReactDOM.render(
+		<TwitterButton urls = {urls} />,
+		document.getElementById('socialbutton')
+		);		
 		ReactDOM.render(
 		<App title={response.data[0].title} content = {he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"")}/>,
 		document.getElementById('app')
