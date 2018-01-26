@@ -18,19 +18,15 @@ What things you need to install the software and how to install them
 Give examples
 ```
 
-### Installing
+### Installing & Starting
 
-npm start
+> $ npm start
 
 
 ## Built With
 
 * [React.js](https://reactjs.org) - The web framework used
 * [Material-ui](http://www.material-ui.com/#/) - The ui framework used
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Authors
