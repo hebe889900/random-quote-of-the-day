@@ -19,9 +19,9 @@ Give examples
 ```
 
 ### Installing & Starting
-
+```
 > $ npm start
-
+```
 
 ## Built With
 
