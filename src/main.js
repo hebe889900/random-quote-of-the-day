@@ -4,6 +4,7 @@ import App from './App.jsx';
 import QuoteButton from './QuoteButton.jsx';
 import TwitterButton from './TwitterButton.jsx';
 
+
 InitializePage();
 RenderButton();
 RenderSocialButton();

@@ -2,6 +2,8 @@
 
 // webpack.config.js
 const path = require('path'); // NOTE: We require path because we use it below
+const ManifestPlugin = require('webpack-manifest-plugin');
+ 
 
 module.exports = {
 
@@ -27,6 +29,9 @@ module.exports = {
             }
          }
       ]
-   }
+   },
+  plugins: [
+    new ManifestPlugin()
+  ]
 
 };
