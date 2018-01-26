@@ -7,11 +7,14 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
 
-  entry: './src/main.js', // IMPORTANT: We changed the path to match our new index.js location
+  entry: [
+    path.resolve(__dirname, 'src/main.js')
+  ], // IMPORTANT: We changed the path to match our new index.js location
 
   output: {
     path: path.resolve(__dirname+ '/dist'), // [3]
     filename: 'bundle.js',
+    publicPath: '/'
   },
 	devServer: {
 	  contentBase: "./src",
@@ -27,7 +30,10 @@ module.exports = {
             query: {
                presets: ['es2015', 'react']
             }
-         }
+         },{
+           test: /\.html$/,
+           loader: 'html'
+          }
       ]
    },
   plugins: [
