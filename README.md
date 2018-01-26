@@ -10,9 +10,9 @@ One Paragraph of project description goes here
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Random Quote of the day
 
-What things you need to install the software and how to install them
+A web app that can display a random quote. Click new quote button to change the quote as well as the font/background/button color. Click twitter/tumblr button to instantly share the quote and the author to your friends.
 
 ```
 Give examples
