@@ -2,21 +2,13 @@
 
 https://dry-caverns-64614.herokuapp.com/
 
-# Project Title
-
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Random Quote of the day
 
 A web app that can display a random quote. Click new quote button to change the quote as well as the font/background/button color. Click twitter/tumblr button to instantly share the quote and the author to your friends.
 
-```
-Give examples
-```
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Installing & Starting
 ```
