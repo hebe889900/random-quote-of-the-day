@@ -20,6 +20,15 @@ These instructions will get you a copy of the project up and running on your loc
 * [React.js](https://reactjs.org) - The web framework used
 * [Material-ui](http://www.material-ui.com/#/) - The ui framework used
 
+### Todo list
+
+- [ ]Color fade in animation when click the button
+- [ ]A way to add the background color
+- [ ]Change the order of displaying quotes and authors
+- [ ]Change the fonts of the quotes
+- [ ]Change the fonts of the authors
+- [ ]Find a database to load avatar of each authors
+
 
 ## Authors
 
