@@ -22,12 +22,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Todo list
 
-- [ ]Color fade in animation when click the button
-- [ ]A way to add the background color
-- [ ]Change the order of displaying quotes and authors
-- [ ]Change the fonts of the quotes
-- [ ]Change the fonts of the authors
-- [ ]Find a database to load avatar of each authors
+- [ ] Color fade in animation when click the button
+- [X] A way to add the background color
+- [X] Change the order of displaying quotes and authors
+- [X] Change the fonts of the quotes
+- [X] Change the fonts of the authors
+- [ ] Find a database to load avatar of each authors
+- [ ] Change the background of the author to black and font color to white
 
 
 ## Authors
