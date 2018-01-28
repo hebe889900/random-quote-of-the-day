@@ -7,7 +7,7 @@ import he from 'he';
 import App from './App.jsx';
 import TwitterButton from './TwitterButton.jsx';
 
-const colors = [["#B71C1C","#E57373"],["#880E4F","#F06292"],["#4A148C","#BA68C8"],["#1A237E","#5C6BC0"],["#0D47A1","#42A5F5"],["#01579B","#039BE5"],["#1B5E20","#43A047"]];
+const colors = [["#212121","#E57373"],["#880E4F","#F06292"],["#4A148C","#BA68C8"],["#1A237E","#5C6BC0"],["#006064","#42A5F5"],["#004D40","#039BE5"],["#827717","#43A047"],["#E65100","#43A047"],["#BF360C","#43A047"],["#263238","#43A047"]];
 console.log(colors.length)
 
 class QuoteButton extends React.Component {
@@ -44,14 +44,14 @@ function handleClick(e){
 	.then(function (response) {
 		//alert("clicked");
 		//alert(response.data[0].content);
-		let content = he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"");
+		let content = '"' + he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"") + '"';
 		let title = response.data[0].title;
 		let twitter_url = 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + '"' + content + '" ' + title;
 		let tumblr_url = 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' + title + '&content=' + content + '&canonicalUrl=https://www.tumblr.com/buttons&shareSource=tumblr_share_button'
 		let urls = [encodeURI(twitter_url),encodeURI(tumblr_url)];
 		console.log(urls);
 		ReactDOM.render(
-		<App color = {color} titleColor = {color} title={response.data[0].title} content = {content}/>,
+		<App appBarStyle = {{backgroundColor:color}} styles = {{backgroundColor:color}} color = {color} titleColor = {color} title={response.data[0].title} content = {content}/>,
 		document.getElementById('app')
 		);
 

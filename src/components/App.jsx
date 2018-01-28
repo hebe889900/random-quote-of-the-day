@@ -6,20 +6,16 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import AppBar from 'material-ui/AppBar';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import FlatButton from 'material-ui/FlatButton';
+import Divider from 'material-ui/Divider';
 import axios from 'axios';
 import TwitterButton from './TwitterButton.jsx';
 
-const divStyle = {
-	height: '100%',
-	width: '100%',
-  	backgroundColor: 'black',
-}
 
 const MyNavLinks = () => (
   <ToolbarGroup>
-    <FlatButton label="Dashboard" />
-    <FlatButton label="Settings" />
-    <FlatButton label="Profile" />
+    <FlatButton label="Dashboard" labelStyle = {{color: "white"}}/>
+    <FlatButton label="Settings" labelStyle = {{color: "white"}}/>
+    <FlatButton label="Profile" labelStyle = {{color: "white"}}/>
   </ToolbarGroup> 
 );
 
@@ -27,16 +23,17 @@ class App extends React.Component {
    render() {
       return (
       	<MuiThemeProvider>
-      		 <div style = {divStyle}>
+      		 <div style = {this.props.styles}>
 		         <div className="container">
-		         	<AppBar title="Brand" iconElementRight={<MyNavLinks />} />
+		         	<AppBar style = {this.props.appBarStyle} title="Quotes of the day" iconElementRight={<MyNavLinks />} />
 			         	<Card>
-			         	    <CardHeader title= {this.props.title} 
-							      titleColor = {this.props.titleColor} actAsExpander={true}
-							      showExpandableButton={true}/>
-			            <CardText color = {this.props.color}>{this.props.content}</CardText>
-			            <CardActions id = "button"></CardActions>
-			            <CardActions id = "socialbutton"></CardActions>
+			         	<CardHeader titleStyle = {{fontSize: "2em",fontWeight: "bold"}} title= {this.props.title} titleColor = {this.props.titleColor} actAsExpander={true} showExpandableButton={true}/>	
+			         	<Divider />
+			            <CardText style = {{fontSize: "1.5em"}} color = {this.props.color}>{this.props.content}</CardText>		            
+			            <CardActions>
+			            	<div id = "button"></div>
+			            	<div id = "socialbutton"></div>
+			            </CardActions>
 			            </Card>
 		         </div>
 	         </div>
@@ -64,7 +61,7 @@ function handleClick(e){
 		document.getElementById('socialbutton')
 		);		
 		ReactDOM.render(
-		<App title={response.data[0].title} content = {he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"")}/>,
+		<App styles = {{fontFamily: "'Futura URW',sans-serif"}} title={response.data[0].title} content = {he.decode(response.data[0].content).replace(/(<([^>]+)>)/ig,"")}/>,
 		document.getElementById('app')
 		);
 	})
